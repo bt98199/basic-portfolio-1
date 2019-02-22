@@ -22,10 +22,6 @@ header {
    margin-left: 10%;
 }
 
-.myname:hover {
-    background-color: #FF00FF;
-}
-
 h1 { 
    font-family: Georgia, Times, "Times New Roman", serif;
    font-size: 24pt;
@@ -64,12 +60,16 @@ a:hover {
 /* below impacts the middle section not the content */
 .container {
     clear: both;
-    padding: 2vw 8vw;
+    padding: 2vh 8vw;
 }
 
+/* 
+Problem I ran into with body (I think it has to do with the body):
+1. The soace between the .container and the footer varies from page to page and I am not sure why, what that extra space is from is that padding or margin I am not finding somewhere?
+*/
 body {
-    margin: 0 auto;
-    background-image: url("../images/pastel.jpg")
+    background-image: url("../images/pastel.jpg");
+    /* margin: 0 auto; commenting out because this code no longer does anything after adding padding 2vh to the .container */
 }
 
 /* below impacts the content */
@@ -80,31 +80,31 @@ body {
     overflow: auto;  
 }
 
+.pcentercontainer {
+    background-color: #ffffff;
+    padding: 0 20px;
+    margin: 0 30px 30px 30px; 
+    overflow: auto;  
+}
+
 .centerheader {
     font-family: Georgia, Times, "Times New Roman", serif;
     color:#4aaaa5;
 }
 
-/* 
-Problems I ran into with h2 (below):
-1. the hover over without the width: 20vw takes up the entire size of .centrercontainer but with the width: 20vw, when resizing the page the About me goes onto a new line
-
-...what I want - to have a more contained box without the resizing a proble, so when the user hover overs the h2 it will only have a fixed background of the text and doesn't really go beyond the text - sort of like .myname
-*/
 h2 {
     padding: 10px;  
-    width: 20vw;
-}
-
-h2:hover {
-    color: #ffffff;
-    background-color: #FF00FF;
+    /* width: 20vw; commented out becuase it no longer does anything? */
 }
 
 img {
     float: left;
 }
 
+/* below impacts the center container body 
+Problem I ran into:
+1. Portfolio page the center container fills to the bottom of the page, the footer and I wanted there to be space between the footer and the white container which contains the boxes
+*/
 .centerbody {
     overflow: auto;
 }
@@ -114,17 +114,9 @@ p.centertext {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-p.centertext:hover {
-    color: #FF00FF;
-}
-
 p.centertext2 {
     color: #777777;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-}
-
-p.centertext2:hover {
-    color: #FF00FF;
 }
 
 /* below imacts the boxes on the portfolio pages within .center */
@@ -133,7 +125,9 @@ Problems I ran into:
 1. Not sure why there is a little grey background peeking through the .boximage and the .boximage is not taking the entirety of the box
 2. Why the teal #smallbox overtakes #bigbox when resizing the window smaller and doesn't move with the resizing
 3. Why there is more white space on the left of the .centercontainer and the boxes do not fill the space and instead move to the next row 
+4. It I set .boximage height to 100% the grey background goes away and the image fills the entire container but the image is distorted 
 */
+
 #bigbox {
     width: 15vw;
     height: 15vw; 
@@ -178,6 +172,11 @@ p.footer {
 
 /* impacts the form on the contact page */
 /* style inputs with type="text", select elements and textareas */
+/* Problems I ran into with the form:
+1. Not able to change the font for the text above the forms ie First Name Last Name Country Subject
+2. Not able to change the font-family of the subject button
+3. Not able to manipulate the font button too much
+*/ 
 input[type=text], select, textarea {
     width: 100%; 
     padding: 12px; 
@@ -185,4 +184,96 @@ input[type=text], select, textarea {
     border-radius: 4px; /* rounded borders */
     margin-bottom: 25px; /* bottom margin */
     resize: vertical; /* allow the user to vertically resize the textarea (not horizontally) */
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+label {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* below is for extra.html to play around with other CSS */
+.extramyname {
+    height: 100%;
+    position: absolute;
+    background-color: #4aaaa5;
+    padding: 10px;
+    margin-left: 10%;
+ }
+ 
+ .extramyname:hover {
+     background-color: #FF00FF;
+ }
+
+/* 
+Problems I ran into with h2 (below):
+1. the hover over without the width: 30vw takes up the entire size of .centrercontainer but with the width: 30vw, when resizing the page the About me goes onto a new line
+
+...what I want - to have a more contained box without the resizing a proble, so when the user hover overs the h2 it will only have a fixed background of the text and doesn't really go beyond the text - sort of like .myname
+*/
+
+ .extrah2 {
+    padding: 10px;  
+    width: 30vw;
+}
+
+.extrah2:hover {
+    color: #ffffff;
+    background-color: #FF00FF;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4aaaa5;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: left;
+}
+  
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none; /* this hides the dropdown until hover over */
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #FF00FF;
+}
+
+.extracontainer {
+    clear: both;
+    padding: 2vh 8vw;
+}
+
+.extracontainer:hover {
+    background-image: url("../images/hover2.jpg");
 }
