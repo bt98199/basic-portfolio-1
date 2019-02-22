@@ -5,6 +5,7 @@
 }
 
 /* this impacts the header */
+
 header {
     position: relative;
     width: 100%;
@@ -29,7 +30,7 @@ h1 {
    text-align: center;
 }
 
-.links {
+.headerlinks {
     display: inline-block;
     font-size: 18pt;
     padding: 20px 20px;
@@ -43,14 +44,15 @@ li {
 }
 
 a {
-    text-decoration:none; 
+    text-decoration:none;
+    color: #777777; 
 }
 
 /* this impacts the middle section not the content */
 
 .container {
     clear: both;
-    padding: 5vw;
+    padding: 2vw 8vw;
 }
 
 body {
@@ -59,15 +61,14 @@ body {
 }
 
 /* this impacts the content */
-.center {
+.centercontainer {
     background-color: #ffffff;
     padding: 20px;
     margin: 0 30px; 
-    overflow: auto;
-    
+    overflow: auto;  
 }
 
-.maintop {
+.centerheader {
     font-family: Georgia, Times, "Times New Roman", serif;
     color:#4aaaa5;
 }
@@ -76,16 +77,16 @@ img {
     float: left;
 }
 
-.body {
+.centerbody {
     overflow: auto;
 }
 
-p.body {
+p.centertext {
     color: #777777;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-p.body2 {
+p.centertext2 {
     color: #777777;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
