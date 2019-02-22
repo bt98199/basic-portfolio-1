@@ -4,6 +4,7 @@
     box-sizing: border-box; 
 }
 
+/* this impacts the header */
 header {
     position: relative;
     width: 100%;
@@ -45,11 +46,19 @@ a {
     text-decoration:none; 
 }
 
+/* this impacts the middle section not the content */
+
 .container {
     clear: both;
     padding: 5vw;
 }
 
+body {
+    margin: 0 auto;
+    background-image: url("../images/pastel.jpg")
+}
+
+/* this impacts the content */
 .center {
     background-color: #ffffff;
     padding: 20px;
@@ -63,18 +72,14 @@ a {
     color:#4aaaa5;
 }
 
-body {
-    margin: 0 auto;
-    background-image: url("../images/pastel.jpg")
-}
-
 img {
     float: left;
 }
 
 .body {
-    
+    overflow: auto;
 }
+
 p.body {
     color: #777777;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -85,8 +90,38 @@ p.body2 {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-.footer {
+/* imacts the boxes on the portfolio pages within .center */
+
+#bigbox {
+    width: 15vw;
+    height: 15vw; 
+    float: left; 
     position: relative;
+    margin: 2.5vw; 
+    background-color: #cccccc;
+}
+
+.boximage {
+    height: auto;
+    width: 100%;
+}
+
+#smallbox {
+    background-color: #4aaaa5;
+    color: #ffffff;
+    width: 100%;
+    position: absolute;
+    bottom: 10px; 
+    padding: 20px;
+    text-align: center;
+}
+
+/* impacts the footer */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
     height: 60px;
     margin: 0 auto;
@@ -100,14 +135,15 @@ p.footer {
     padding: 10px 0 0 0;
 }
 
-    /* Style inputs with type="text", select elements and textareas */
+/* impacts the form on the contact page */
+/* style inputs with type="text", select elements and textareas */
+
 input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */  
-    border: 1px solid #ccc; /* Gray border */
+    width: 100%; 
+    padding: 12px; 
+    border: solid 1px #cccccc; 
     border-radius: 4px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
+    margin-bottom: 25px; /* Bottom margin */
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
