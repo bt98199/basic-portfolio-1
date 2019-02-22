@@ -4,8 +4,7 @@
     box-sizing: border-box; 
 }
 
-/* this impacts the header */
-
+/* below impacts the header */
 header {
     position: relative;
     width: 100%;
@@ -23,12 +22,18 @@ header {
    margin-left: 10%;
 }
 
+.myname:hover {
+    background-color: #FF00FF;
+}
+
 h1 { 
    font-family: Georgia, Times, "Times New Roman", serif;
    font-size: 24pt;
    color: #ffffff;
    text-align: center;
 }
+
+
 
 .headerlinks {
     display: inline-block;
@@ -43,13 +48,20 @@ li {
     float: left;
 }
 
+/* 
+Personal taste with a (below):
+1. I purposefully forced the color to be grey regardless if visited or not
+*/
 a {
     text-decoration:none;
     color: #777777; 
 }
 
-/* this impacts the middle section not the content */
+a:hover {
+    color: #FF00FF;
+}
 
+/* below impacts the middle section not the content */
 .container {
     clear: both;
     padding: 2vw 8vw;
@@ -60,10 +72,10 @@ body {
     background-image: url("../images/pastel.jpg")
 }
 
-/* this impacts the content */
+/* below impacts the content */
 .centercontainer {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 0 20px;
     margin: 0 30px; 
     overflow: auto;  
 }
@@ -71,6 +83,22 @@ body {
 .centerheader {
     font-family: Georgia, Times, "Times New Roman", serif;
     color:#4aaaa5;
+}
+
+/* 
+Problems I ran into with h2 (below):
+1. the hover over without the width: 20vw takes up the entire size of .centrercontainer but with the width: 20vw, when resizing the page the About me goes onto a new line
+
+...what I want - to have a more contained box without the resizing a proble, so when the user hover overs the h2 it will only have a fixed background of the text and doesn't really go beyond the text - sort of like .myname
+*/
+h2 {
+    padding: 10px;  
+    width: 20vw;
+}
+
+h2:hover {
+    color: #ffffff;
+    background-color: #FF00FF;
 }
 
 img {
@@ -86,19 +114,32 @@ p.centertext {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
+p.centertext:hover {
+    color: #FF00FF;
+}
+
 p.centertext2 {
     color: #777777;
     font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
-/* imacts the boxes on the portfolio pages within .center */
+p.centertext2:hover {
+    color: #FF00FF;
+}
 
+/* below imacts the boxes on the portfolio pages within .center */
+/* 
+Problems I ran into:
+1. Not sure why there is a little grey background peeking through the .boximage and the .boximage is not taking the entirety of the box
+2. Why the teal #smallbox overtakes #bigbox when resizing the window smaller and doesn't move with the resizing
+3. Why there is more white space on the left of the .centercontainer and the boxes do not fill the space and instead move to the next row 
+*/
 #bigbox {
     width: 15vw;
     height: 15vw; 
     float: left; 
     position: relative;
-    margin: 2.5vw; 
+    margin: 2.5vw; /* not sure this does anythign and  not sure why, px or vw, nada*/
     background-color: #cccccc;
 }
 
@@ -118,7 +159,6 @@ p.centertext2 {
 }
 
 /* impacts the footer */
-
 .footer {
     position: fixed;
     left: 0;
@@ -138,13 +178,11 @@ p.footer {
 
 /* impacts the form on the contact page */
 /* style inputs with type="text", select elements and textareas */
-
 input[type=text], select, textarea {
     width: 100%; 
     padding: 12px; 
     border: solid 1px #cccccc; 
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-bottom: 25px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    border-radius: 4px; /* rounded borders */
+    margin-bottom: 25px; /* bottom margin */
+    resize: vertical; /* allow the user to vertically resize the textarea (not horizontally) */
 }
