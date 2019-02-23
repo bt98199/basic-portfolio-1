@@ -37,25 +37,6 @@ h1 {
     float: right;
 }
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip a {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-   
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
-  }
-
 li {
     list-style-type: none;
     float: left;
@@ -143,6 +124,7 @@ Problems I ran into:
 2. Why the teal #smallbox overtakes #bigbox when resizing the window smaller and doesn't move with the resizing
 3. Why there is more white space on the left of the .centercontainer and the boxes do not fill the space and instead move to the next row 
 4. It I set .boximage height to 100% the grey background goes away and the image fills the entire container but the image is distorted 
+5. The text within #smallbox moves onto a separate line and makes the #smallbox bigger instead of being a fixed size and making the text smaller or wrap? couldn't figure that out
 */
 
 #bigbox {
