@@ -17,6 +17,9 @@ The exercise had us manipulate:
 
 All with CSS and HTML, no other languages, installations, or packages used.
 
+## Lorem Ipsum No More
+Instead of using the tired Lorem Ipsum, I went for Fyre Ipsum, check it out! <a href="https://fyreipsum.com/">Fyre Ipsum</a>.
+
 ## Roadmap
 I intend to redesign this page with more advanced visuals and a working portfolio in the future using:
 
