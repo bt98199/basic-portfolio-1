@@ -28,7 +28,7 @@ I intend to redesign this page with more advanced visuals and a working portfoli
 * React.js
 
 ## Feedback
-Open to feedback, I postred pain-points in the comments of the <a href="https://github.com/bretgithub/basic-portfolio/blob/master/assets/css/style.css">style.css</a> file. 
+Open to feedback, I posted pain-points in the comments of the <a href="https://github.com/bretgithub/basic-portfolio/blob/master/assets/css/style.css">style.css</a> file. 
 
 ## Extra
 extra.html was testing out other css tricks not covered but thought would be cool to include.
